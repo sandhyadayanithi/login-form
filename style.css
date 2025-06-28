@@ -1,0 +1,91 @@
+*{
+  box-sizing: border-box;
+}
+h1{
+  text-align: center;
+  color:#E8F4FD ;
+  margin-block-end: 60px;
+}
+p{
+  color:#E8F4FD ;
+}
+p:hover{
+  color: #4A90E2;
+  cursor: pointer;
+}
+body{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
+  min-height:100vh;
+  background-color: #0B1426;
+  background-image: url(starry-background.avif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  line-height: 1.2;
+}
+.kid-forward{
+  position:absolute;
+  top:-70px;
+  left:-50px;
+  transform: rotateZ(40deg);
+  animation: move 10s infinite ease-in-out ;
+}
+@keyframes move{
+  0% {
+    transform: translateX(-30px) rotateZ(40deg) scaleX(1);
+  }
+  25% {
+    transform: translateX(370px) rotateZ(40deg) scaleX(1);
+  }
+  26% {
+    transform: translateX(370px) rotateZ(-40deg) scaleX(-1);
+  }
+  79% {
+    transform: translateX(-30px) rotateZ(-40deg) scaleX(-1);
+  }
+  80% {
+    transform: translateX(-30px) rotateZ(40deg) scaleX(1);
+  }
+  100% {
+    transform: translateX(-30px) rotateZ(40deg) scaleX(1);
+  }
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:30px;
+  margin-block: 40px;
+}
+.box{
+  box-shadow:1px 1px 30px rgba(173, 216, 230, 0.4);
+  position: relative;
+  background-color: #1E3A5F;
+  padding: 30px;
+  border-radius: 50px;
+  width:430px;
+  @media(width<470px){
+    width:350px;
+  }
+}
+input{
+  padding: 15px;
+  border-radius: 25px;
+  border:0;
+  inline-size: 250px;
+}
+button{
+  width: 180px;
+  padding: 10px;
+  border-radius: 25px;
+  border: 0;
+  cursor: pointer;
+}
+button:active{
+  box-shadow:-1px -1px 30px #4A90E2;
+}
